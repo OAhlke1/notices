@@ -74,8 +74,8 @@ function renderBin() {
                     <div class="binItemDate">${bin[i].date}</div>
                     <div class="binItemNoteText"><p>${bin[i].noteText}</p></div>
                     <div class="buttons displayFlex">
-                        <button onclick="restoreNote(event, ${i})">Restore note</button>
-                        <button onclick="removeFromBin(event, ${i})">Remove note</button>
+                        <button class="restoreNote" onclick="restoreNote(event, ${i})">Restore note</button>
+                        <button class="removeNote" onclick="removeFromBin(event, ${i})">Remove note</button>
                     </div>
                 </div>
             `;
@@ -209,7 +209,7 @@ function save(event, i) {
     event.preventDefault();
     let pTag = document.querySelector(`#pTag${i}`);
     let textfield = document.querySelector(`#textarea${i}`);
-    if(pTag.innerHTML === textfield.value) {
+    if(pTag.innerHTML === textfield.value || textfield.value === "") {
         pTag.classList.remove('displayNone');
         textfield.classList.add('displayNone');
         document.querySelector(`#save${i}`).classList.add('displayNone');
