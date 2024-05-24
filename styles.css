@@ -109,6 +109,7 @@ p {
     justify-content: space-between;
     column-gap: 10px;
     position: fixed;
+    z-index: 50;
     right: 0;
     bottom: 0;
     width: 100%;
@@ -237,6 +238,15 @@ p {
     overflow-y: scroll;
     padding: 10px;
     box-sizing: border-box;
+}
+
+@media only screen and (max-width: 500px) {
+    .binList {
+        width: 100vw;
+        height: 100vh;
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
 }
 
 @keyframes fadeIn {
