@@ -1,4 +1,5 @@
 body {
+    margin: 0;
     font-family: sans-serif;
 }
 
@@ -99,7 +100,7 @@ p {
 
 .addNotesShowBin {
     column-gap: 10px;
-    position: fixed;
+    position: absolute;
     right: 5vw;
     bottom: 5vw;
 }
@@ -110,8 +111,8 @@ p {
 
 .addNote {
     align-items: center;
-    min-width: 50px;
-    width: 5vw;
+    justify-content: center;
+    width: 30px;
     aspect-ratio: 1 / 1;
     cursor: pointer;
 }
@@ -121,8 +122,8 @@ p {
     justify-content: center;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0 0 0 / 0.7);
     z-index: 2;
 }
